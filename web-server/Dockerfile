@@ -1,4 +1,4 @@
-FROM codekoalas/nodejs:0.12
+FROM nodesource/node:0.12.4
 # Create app directory
 WORKDIR /usr/src/app
 
