@@ -1,0 +1,30 @@
+version: "3"
+services:
+  game:
+    restart: always
+    build:
+      context: ./game-server
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./log:/usr/src/app/log
+      - ./upload:/usr/src/app/public/upload
+    networks:
+      - backend
+    ports:
+      - "7110:7110"
+
+  web:
+    restart: always
+    build:
+      context: ./web-server
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./log:/usr/src/app/log
+      - ./upload:/usr/src/app/public/upload
+    networks:
+      - backend
+    ports:
+      - "7111:7111"
+
+networks:
+  backend:
