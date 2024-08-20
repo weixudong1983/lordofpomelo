@@ -11,8 +11,7 @@ COPY . .
 RUN npm run build
 #RUN cd nxAdmin  && npm install  --registry=http://registry.npm.taobao.org  && npm run build:prod
 
-EXPOSE 7110
-EXPOSE 7111
+EXPOSE 3000-4000
 
 # RUN echo "Asia/Shanghai" > /etc/timezone
 # RUN dpkg-reconfigure -f noninteractive tzdata

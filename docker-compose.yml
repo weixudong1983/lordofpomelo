@@ -24,7 +24,7 @@ services:
     networks:
       - backend
     ports:
-      - "7111:7111"
+      - "3001:3001"
 
 networks:
   backend:
